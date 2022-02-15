@@ -3,12 +3,15 @@
 
 REM Welcome to the Folder Cleaner 
 REM This program cleans EVERYTHING from within a folder
-REM For this to work for you, simply change the path in parentheses after the cd
+REM For this to work for you, simply change two things
+REM First you change the Drive Letter to the one where the folder is located
+REM Example: [drive letter]: do not include the brackets (do not forget colon)
+REM Second you change the path in between the parentheses
 REM Example: cd "[your path]" do not include the brackets
 
 
 echo starting program, cleaner
-REM Replace the below path
+C: 
 cd "C:\Users\Administrator\Desktop\TEST_FOLDER"
 timeout 3
 cls

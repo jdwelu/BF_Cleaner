@@ -1,37 +1,18 @@
-=========================================================================================================
-1. Right click the "cleaner1.bat" file and select edit. It will open the file with notepad.
-2. Once in the file, erase the path between the parentheses, on the line containing the cd command. 
-3. Now paste the path to the folder you want to clear.
-WARNING: MAKE SURE YOU HAVE THE RIGHT PATH. THIS WILL DELETE EVERYTHING IN THE FOLDER YOU POINT IT AT!!!
-YOU WILL NOT BE ABLE TO RECOVER ANYTHING DELETED!!!
-4. Once you are sure that you have the exact path to the folder you want to clear, save the file.
-5. Your batch file is now ready to be run. Right click it and select Run as Administrator.
-6. There are some 3 second delays, so you can see the file run. It will execute on its own.
-7. Now check the folder whose path you put down. It should be completely empty. If not see troubleshooting below.
-8. Now Use Windows Task Scheduler to run the file as frequently as you would like.  
-=========================================================================================================
-Troubleshooting: 
-- If the file does not run, or throws an error. Open a window of cmd by going to run and typing cmd
-- The first letter of the prompt should be C: or MATCH the letter of the path you are using.  
-- If it doesn't match the path, you will have to change the drive within the batch file.
-- Let's assume that the the files you wish to erase are on a drive labelled "X"
-- You will then need to add the drive change right before the path. SEE BELOW 
-
-
-
-
 @ echo off
 
 
 REM Welcome to the Folder Cleaner 
 REM This program cleans EVERYTHING from within a folder
-REM For this to work for you, simply change the path in parentheses after the cd
-REM Example: cd "[your path]" do not include brackets
+REM For this to work for you, simply change two things
+REM First you change the Drive Letter to the one where the folder is located
+REM Example: [drive letter]: do not include the brackets (do not forget colon)
+REM Second you change the path in between the parentheses
+REM Example: cd "[your path]" do not include the brackets
 
 
 echo starting program, cleaner
-X:   <-------------------------------------------------- ONLY NEEDED IF FOLDER IS ON ANOTHER DRIVE (see troubleshooting)
-cd "X:\Users\Administrator\Desktop\TEST_FOLDER"   <----- RIGHT HERE IS WHERE YOU WILL CHANGE THE PATH, YOU WILL ONLY CHANGE THIS LINE
+C:   <-------------------------------------------------- Change your drive letter here
+cd "C:\Users\Administrator\Desktop\TEST_FOLDER"   <----- Change your path here (TEST_FOLDER is the folder being cleared.)
 timeout 3
 cls
 
