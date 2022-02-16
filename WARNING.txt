@@ -1,0 +1,10 @@
+Today: 02/16/2022
+
+This batchfile works and works extremely well, however, if not configured right, it will turn your PC into swiss cheese. 
+You will lose a lot of data depending on where you house the file.
+My best recommendation would be to house it on a thumb drive an run it from there. 
+This would sandbox it, in the event anything goes wrong.
+I was trying to look at some data while it ran, so I tweaked it a little, and ran from the desktop. 
+Something went wrong with the path and it immediately erased all of the files in random folders on the desktop.
+
+YOUR DRIVE PATH HAVE TO BE PERFECT!!! 
