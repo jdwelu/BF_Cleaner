@@ -5,24 +5,31 @@ REM Welcome to the Folder Cleaner
 REM This program cleans EVERYTHING from within a folder
 REM For this to work for you, simply change two things
 REM First you change the Drive Letter to the one where the folder is located
-REM Example: [drive letter]: do not include the brackets (do not forget colon)
+REM Example: [drive letter]: do not include brackets
 REM Second you change the path in between the parentheses
-REM Example: cd "[your path]" do not include the brackets
+REM Example: cd "[your path]" do not include brackets
+REM Lastly, change the path in the if exists line to match your path EXACTLY!!! 
 
 
 echo starting program, cleaner
-C:   <-------------------------------------------------- Change your drive letter here
-cd "C:\Users\Administrator\Desktop\TEST_FOLDER"   <----- Change your path here (TEST_FOLDER is the folder being cleared.)
 timeout 3
+cls
+
+C:     <----------------------------------------------------------------------------------- Change drive letter here
+if exist "C:\Users\Administrator\Desktop\TEST_FOLDER" (echo Folder Exists) else exit   <--- Change path here
+timeout 3
+cd "C:\Users\Administrator\Desktop\TEST_FOLDER"     <-------------------------------------- Change path here too
 cls
 
 
 echo deleting all files
+timeout 3
 del *.* /s /f /q
 cls
 
 
 echo deleting all folders and subdirectories
+timeout 3
 rmdir . /S /Q 2>nul
 cls
 
